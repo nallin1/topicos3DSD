@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24_02 | Arrays</title>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="containerMain">
+        <div class="containerTitle">
+            <h1>💻 Tópicos em Tecnologia da Informação: Arrays</h1>
+            <i>Desenvolvimento de Sistemas - 24/02/2023</i>
+        </div>
+        <div class="containerWarning">
+            <h3>⚠️ Verifique o Console do Desenvolvedor...</h3>
+        </div>
+    </div>
+    
+    
+    <script>
+        // sort
+        console.log(":: Sort ::");
+        const instrumentos = ["Guitarra", "Baixo", "Violão"];
+        instrumentos.sort();
+        console.log(instrumentos);
+
+        const idade = [32, 55, 22, 12, 54, 21];
+        idade.sort();
+        console.log(idade);
+
+        // função anonima
+        // método map
+        console.log("\n\n:: Map ::")
+        const lista = [1,2,3,4,5];
+        const novaLista = lista.map(function(item){
+            return item*5;
+        })
+
+        console.log(lista);
+        console.log(novaLista);
+
+        // arrow function
+
+        const novoInstrumentos = instrumentos.map(
+            (instrumento) => {
+                return 'Instrumento: ' + instrumento;
+            }
+        )
+        console.log(novoInstrumentos);
+
+        // reduce
+        console.log("\n\n:: Reduce ::");
+        const aulas = [10, 20, 30, 45];
+        const total1=aulas.reduce(
+            (acumulador, atual) => {
+                return  acumulador+atual;
+            }
+        )
+        console.log(total1);
+
+        // findIndex
+        console.log("\n\n;; FindIndex ;;")
+        const frutas = ["banana", "maca", "uva", "abacate"];
+        const busca = frutas.findIndex(
+            (fruta) => {
+                return fruta === 'maca';
+            }
+        )
+        console.log(busca);
+    </script>
+</body>
+
+</html>
