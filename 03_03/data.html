@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24_02 | Arrays</title>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="containerMain">
+        <div class="containerTitle">
+            <h1>💻 Tópicos em Tecnologia da Informação: Data</h1>
+            <i>Desenvolvimento de Sistemas - 03/03/2023</i>
+        </div>
+        <div class="containerWarning">
+            <h3>⚠️ Verifique o Console do Desenvolvedor...</h3>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        var data = new Date(2023, 3, 3, 15, 23, 35);
+
+        console.log(data);
+        console.log(typeof data);
+
+        var diaSemana = data.getDay();
+        var diaSemanaTexto;
+        switch (diaSemana) {
+            case 0:
+                diaSemanaTexto = "Domingo";
+                break;
+            case 1:
+                diaSemanaTexto = "Segunda";
+                break;
+            case 2:
+                diaSemanaTexto = "Terça";
+                break;
+            case 3:
+                diaSemanaTexto = "Quarta";
+                break;
+            case 4:
+                diaSemanaTexto = "Quinta";
+                break;
+            case 5:
+                diaSemanaTexto = "Sexta";
+                break;
+            case 6:
+                diaSemanaTexto = "Sábado";
+                break;
+            default:
+                diaSemanaTexto = "invalido";
+                break;
+        }
+        console.log("Dia da semana: " + diaSemanaTexto);
+    </script>
+</body>
+
+</html>
