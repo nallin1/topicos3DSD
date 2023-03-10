@@ -4,14 +4,17 @@
     margin: 0;
 }
 
-body {
-    display: flex;
-    justify-content: center;
+body {  
     background-color: #292a2d;
+    transition: 1s all;
     /* cor de fundo : #202124 */
 }
 
 .containerMain {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
     width: 70%;
 }
 .containerTitle {
@@ -43,4 +46,15 @@ body {
     margin-top: 1vh;
     transition: 1s all;
     width: 100%;
+}
+
+footer {
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+}
+
+#changeThemeBtn {
+    padding: 10px;
+    width: 5em;
 }
