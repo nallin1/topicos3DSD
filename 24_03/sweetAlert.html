@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTI</title>
+    <link rel="shortcut icon" href="https://em-content.zobj.net/source/microsoft-teams/337/laptop_1f4bb.png"
+        type="image/x-icon">
+    <style>
+        #btn {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgb(127, 221, 253);
+            font-size: larger;
+            border: none;
+            font-weight: bolder;
+            font-family: Inter;
+            margin-top: 2vh;
+
+        }
+        .swal2-title {
+            font-family: Inter;
+        }
+    </style>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="containerMain">
+            <div class="containerTitle">
+                <h1>💻 Tópicos em Tecnologia da Informação: JSON</h1>
+                <i>Desenvolvimento de Sistemas - 17/03/2023</i>
+            </div>
+            <div class="containerWarning">
+                <h3>⚠️ Verifique o Console do Desenvolvedor...</h3>
+            </div>
+
+            <div class="btnClick">
+                <button id="btn" onclick="Swal.fire('Clicou no botão !')">Clique em mim !</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="changeTheme">
+            <img src="../images/moon.svg" alt="change" onclick="changeTheme()" id="changeThemeBtn">
+        </div>
+    </footer>
+    <script>
+        var darkMode = true;
+
+
+        function changeTheme() {
+            if (darkMode == true) {
+                document.body.style.backgroundColor = "white";
+                darkMode = false;
+            } else {
+                document.body.style.backgroundColor = "#292a2d";
+                darkMode = true;
+            }
+            
+        }
+    </script>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events js</title>
+</head>
+<body>
+    <img src="../images/html5.png" alt="image" onmouseover="this.src='../images/css3.png'" 
+        onmouseleave="this.src='../images/html5.png'" width="500px" onclick="changeDisplay()">
+
+    <script>
+        function changeDisplay() {
+            if (this.style.display == "initial") {
+                this.style.display = "none";
+            } else {
+                this.style.display = "initial";
+            }
+        }
+    </script>
+</body>
+</html>
