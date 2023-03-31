@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            border: solid black;
+        }
+    </style>
+</head>
+<body onkeyup="mudarFundo()">
+
+    <input type="range" name="range" min="0" max="10" id="range" value="0" onmousemove="movMouse()">
+    <span id="span1"></span>
+    <br><br>
+    <input type="text" name="inputText" id="inputText" onkeyup="teclando()">
+    <span id="span2"></span>
+
+    <br><br>
+
+    <input type="color" name="minhaCor" id="minhaCor" onchange="selecionaCor()">
+    <div></div>
+
+    <br><br>
+
+    <input type="button" value="+" id="contadorSoma" onclick="somaContador('+')">
+    <span id="contador">0</span>
+    <input type="button" value="-" id="contadorSub" onclick="somaContador('-')">
+
+    <script>
+        function movMouse() {
+            var valor = document.getElementById('range').value;
+            document.getElementById('span1').textContent = valor;
+        }
+
+        function teclando() {
+            var nCarateres = document.getElementById('inputText').value;
+            document.getElementById('span2').textContent = nCarateres.length; 
+        }
+
+        function mudarFundo() {
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
+        }
+
+        function selecionaCor() {
+            var cor = document.getElementById('minhaCor').value;
+            document.getElementsByTagName("div").style.backgroundColor = cor;
+        }
+
+        function somaContador(operacao) {
+            var valorContador = parseInt(document.getElementById('contador').value);
+            switch (operacao) {
+                case '+':
+                    
+                    document.getElementById('contador').textContent = valorContador + 1;
+                    break;
+                case '-':
+                    document.getElementById('contador').textContent = valorContador - 1;
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
